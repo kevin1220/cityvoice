@@ -45,6 +45,12 @@ module.exports = {
             inject: true,
             hash: true,
         }),
+        new HtmlwebpackPlugin({
+            filename: 'load.html',
+            template: SRC_PATH + '/html/load.html',
+            inject: true,
+            hash: true,
+        }),
         // new webpack.optimize.UglifyJsPlugin({ //压缩代码
         //     compress: {
         //         warnings: false

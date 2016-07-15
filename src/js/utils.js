@@ -48,9 +48,7 @@ var MyTools = {
             console.log("myerr:" + err);
         }
     },
-    jssdk:function() {
-        require.ensure(['jquery'],function(){},'jquery');
-        var $ = require('jquery');
+    jssdk:function($) {
         $.ajax({
             url: 'http://www.wit-orange.com/wechat/getconf?url=' + encodeURIComponent(location.href),
             success: function(config) {
