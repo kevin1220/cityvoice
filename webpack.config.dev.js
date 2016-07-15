@@ -27,15 +27,14 @@ module.exports = {
         loaders: [{
                 test: /\.css$/,
                 loader: ExtractTextPlugin.extract(
-                    'css?sourceMap?style',
-                    'js'
+                    'css?sourceMap?style'
                 )
             },
             { test: /.(png|jpg)$/, loader: 'url-loader?limit=8192' }
         ]
     },
     resolve: {
-        extensions: ['', '.js', '.css'],
+        // extensions: ['', '.js', '.css'],
     },
     plugins: [
         new ExtractTextPlugin("css/index.css"),
